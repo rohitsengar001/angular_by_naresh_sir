@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'demoAngular';
   message="";
-  myfunction(){
-    console.log("testing")
-    this.message="welcome";
+  name="rohit";
+  myfunction(value){
+    if (value.length < 8) {
+      this.message="you have entered short value";
+    } else {
+      this.message ="you have entered correct";
+    }
+    console.log(value);
   }
 }
