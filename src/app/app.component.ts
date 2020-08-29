@@ -10,7 +10,10 @@ export class AppComponent {
   message="";
   name="rohit";
   myfunction(value){
-    if (value.length < 8) {
+
+    if (value.length == 0)
+      this.message="Entered value is empty!!!"
+    else if (value.length < 8) {
       this.message="you have entered short value";
     } else {
       this.message ="you have entered correct";
