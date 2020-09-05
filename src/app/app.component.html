@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .one {
+      background-color: blueviolet;
+    }
+
+    .two {
+      border: 2px solid black;
+      padding: 3px;
+      align-content: center;
+    }
+    .three{
+      background: chocolate;
+    }
+  </style>
 </head>
+
 <body>
   <h1>first page</h1>
-   <input #myinput type="text">
-   <button (click) ="myfunction(myinput.value)">click me</button>
-   {{message}} <br>
-   <a [routerLink]= "['/director']">Director page</a>
-   <table>
-     <tr [ngStyle]="{'background-color':getcolor(s.dept)}" *ngFor="let s of students">
-       <td>{{s.id}}</td>
-       <td>{{s.name}}</td>
-       <td>{{s.dept}}</td>
-     </tr>
-   </table>
-   <router-outlet></router-outlet>
-
-   
+  <input #myinput type="text">
+  <button (click)="myfunction(myinput.value)">click me</button>
+  {{message}} <br>
+  <a [routerLink]="['/director']">Director page</a>
+  <table>
+    <!-- style binding -->
+    <tr [ngClass]="['one','three']" *ngFor="let s of students">
+      <td>{{s.id}}</td>
+      <td>{{s.name}}</td>
+      <td>{{s.dept}}</td>
+    </tr>
+  </table>
+  <table>
+    <tr><th><h1>teachers record</h1></th></tr>
+    <tr [ngClass]="'one'" *ngFor="let t of teachers">
+      <td>{{t.id}}</td>
+      <td>{{t.name}}</td>
+      <td>{{t.dept}}</td>
+    </tr>
+  </table>
+  <router-outlet></router-outlet>
 </body>
+
 </html>

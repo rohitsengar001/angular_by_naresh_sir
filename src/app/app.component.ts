@@ -22,6 +22,7 @@ export class AppComponent {
 
 public hasThree =false;
 
+//student object
 students:any[] =[
   {"id":123,"name":"ROHIT","dept":"MCA"},
   {"id":124,"name":"RAHUL","dept":"MCA"},
@@ -29,6 +30,13 @@ students:any[] =[
   {"id":126,"name":"ROHIT","dept":"MCA"},
   {"id":126,"name":"RAJNISH","dept":"B.Pharm"}
 ];
+teachers:any[]=[
+  {"id":213,"name":"RAMESH SHARAN","dept":"MCA"},
+  {"id":214,"name":"RAJESH KHANNA","dept":"MCA"},
+  {"id":215,"name":"SACHIN DEV","dept":"MCA"},
+  {"id":216,"name":"NILAKSHI GOEL","dept":"MCA"}
+];
+//set color function
 getcolor(branch){
   switch (branch){
     case 'MCA':
@@ -39,7 +47,7 @@ getcolor(branch){
          return  "pink";  
      default : break;  
    }
-
 }
+//
 
 }
