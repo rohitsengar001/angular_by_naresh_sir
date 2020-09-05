@@ -9,6 +9,17 @@
   <h1>first page</h1>
    <input #myinput type="text">
    <button (click) ="myfunction(myinput.value)">click me</button>
-   {{message}} 
+   {{message}} <br>
+   <a [routerLink]= "['/director']">Director page</a>
+   <table>
+     <tr [ngStyle]="{'background-color':getcolor(s.dept)}" *ngFor="let s of students">
+       <td>{{s.id}}</td>
+       <td>{{s.name}}</td>
+       <td>{{s.dept}}</td>
+     </tr>
+   </table>
+   <router-outlet></router-outlet>
+
+   
 </body>
 </html>
